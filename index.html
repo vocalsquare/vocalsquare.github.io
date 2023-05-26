@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vocal Square</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Main container styles */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Heading styles */
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    /* Paragraph styles */
+    p {
+      font-size: 1.5rem;
+      color: #777;
+      margin-bottom: 2rem;
+    }
+
+    /* Button styles */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    
+    
+
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+      }
+      
+    }
+    .dark-mode 
+    {
+      .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #121212;
+      font-family: Arial, sans-serif;
+    }
+
+    
+  }
+  .dark-mode button {
+      background-color: #121212;
+      color: #121212;
+      
+    }
+    
+    
+    button{
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+         transition: transform .7s ease-in-out;
+        margin-left:10px;
+        margin-top: 10px;
+        
+        
+        
+
+      }
+      
+      img{
+        width: 50px;
+        height: 50px;
+      }
+  
+    
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+      }
+    } 
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <embed src="vocal_square.svg" width="520" height="520">
+	
+    <h1 id="id">VocalSquare</h1>
+	
+    <p>Your Voice, Your Strength!</p>
+    <a class="btn" href="#">Coming Soon</a>
+    <button onclick="myFunction(); changeColor();"><img id="toggleImage" src="moon.svg" border="0"></button>
+    <script>
+      function myFunction() {
+         var element = document.body;
+         element.classList.toggle("dark-mode");
+         var toggleImage = document.getElementById("toggleImage");
+      var currentSrc = toggleImage.getAttribute("src");
+      var newSrc = currentSrc.includes("moon.svg") ? "sun.svg" : "moon.svg";
+      toggleImage.setAttribute("src", newSrc);
+      toggleImage.setAttribute("alt", newSrc.includes("moon.png") ? "Toggle Dark Mode" : "Toggle Light Mode");
+        
+      }
+      function changeColor() {
+  var x = document.getElementById("id");
+  if (x.innerHTML === "VocalSquare") {
+    x.innerHTML = "VocalSquare ";
+    document.getElementById("id").style.color = "white";
+  } else {
+    x.innerHTML = "VocalSquare";
+    document.getElementById("id").style.color = "black";
+  }
+}
+      
+      </script>
+
+  </div>
+</body>
+</html>
